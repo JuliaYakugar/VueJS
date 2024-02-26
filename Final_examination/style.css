@@ -1,0 +1,342 @@
+.container {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.header .container {
+    justify-content: space-between;
+    margin-top: 44px;
+    margin-bottom: 57px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+.logo * {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+.banner .container {
+    background-image: url(static/banner.jpg);
+    height: 758px;
+    align-items: center;
+    margin-bottom: 96px;
+}
+
+.banner__text {
+    width: 434px;
+    margin-left: 52px;
+}
+
+.banner__text h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 81.25px;
+    margin: 0;
+}
+
+.banner__text p{
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.banner__text button {
+    padding: 26px 48px;
+    border-radius: 18px;
+    background-color: #292F36;
+    border-color: #292F36;
+    cursor: pointer;
+}
+
+.banner__text button span {
+    color: #fff;
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.5px;
+}
+
+.banner__text button span::after {
+    content: url(static/arrow-right-orange.svg);
+    margin-left: 10px;
+    color: #CDA274;
+}
+
+.projects .container {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.projects .container > h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62.5px;
+    margin: 0;
+}
+
+.projects .container > p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    width: 737px;
+    text-align: center;
+    margin-bottom: 93px;
+}
+
+.projects .projects__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.projects .card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+
+.projects .card > div {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects .card h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    margin: 0;
+}
+
+.projects .card p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+}
+
+.projects button {
+    background-color: #F4F0EC;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.advantages {
+    background-color: #F4F0EC;
+    padding: 151px 0;
+    margin-bottom: 96px;
+}
+
+.advantages .container > div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantages .container > div:not(:last-child) {
+    border-right: 1px solid #CDA274;
+}
+
+.advantages .container h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 106.25px;
+    color: #CDA274;
+    margin: 0;
+}
+
+.advantages .container p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+}
+
+.articles .container {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 96px;
+}
+
+.articles .container > h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62.5px;
+    margin: 0;
+}
+
+.articles .container > p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    width: 811px;
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.articles .articles__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 27px;
+}
+
+.articles .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E7E7E7;
+    border-radius: 62px;
+    width: 33.333333%;
+    padding: 21px;
+    position: relative;
+}
+
+.articles .card h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    margin: 21px 0 0 0;
+}
+
+.articles .card .card_info{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles .card p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.articles button {
+    background-color: #F4F0EC;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.articles .card:nth-child(2) {
+    background-color: #F4F0EC;
+}
+
+.articles .card:nth-child(2) button {
+    background-color: #fff;
+}
+
+.articles .card .tag {
+    position: absolute;
+    width: 125px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 8px 8px 8px 0;
+    top: 250px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+footer .container {
+    justify-content: space-between;
+    margin-bottom: 134px;
+}
+
+footer .container > div {
+    width: 33.3333%;
+}
+
+footer .footer_info p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 33px;
+}
+
+footer .footer_info a {
+    margin-right: 54px;
+}
+
+footer .pages {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+footer h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    margin: 0;
+}
+
+footer .pages a {
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 66px;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .contact > div {
+    width: 258px;
+}
+
+footer .contact p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}

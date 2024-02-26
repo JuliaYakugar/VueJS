@@ -1,0 +1,50 @@
+<!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и отобразиться в обратном порядке.
+2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+3. *Дополнительное задание: При клике на элемент списка он должен быть удален. (по желанию) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Less 01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>Задание 1</p>
+        <button @click="reverseText"> {{ text }} </button>
+        <p>Задание 2 и 3</p>
+        <button @click="addElement">Добавить</button>
+        <ul>
+            <li v-for="el in elements" v-if="el.show" @click="delElement(el)" style="cursor: pointer;">
+                {{ el.text }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                text: 'Перевернуть',
+                elements: [
+                    { text: 'Первый элемент списка', show: true},
+                    { text: 'Второй элемент списка', show: true},
+                    { text: 'Третий элемент списка', show: true}
+                ]
+            },
+            methods: {
+                reverseText() {
+                    this.text = this.text.split("").reverse().join("");
+                },
+                addElement() {
+                    this.elements.push({ text: 'Новый элемент списка', show: true });
+                },
+                delElement(el) {
+                    el.show = !el.show;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
