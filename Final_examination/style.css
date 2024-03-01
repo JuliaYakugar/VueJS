@@ -40,12 +40,12 @@
     margin-bottom: 96px;
 }
 
-.banner__text {
+.banner .container .banner__text {
     width: 434px;
     margin-left: 52px;
 }
 
-.banner__text h2 {
+.banner .container .banner__text h2 {
     font-family: "DM Serif Display", serif;
     font-size: 65px;
     font-weight: 400;
@@ -53,14 +53,14 @@
     margin: 0;
 }
 
-.banner__text p{
+.banner .container .banner__text p{
     font-family: "Jost", sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 33px;
 }
 
-.banner__text button {
+.banner .container .banner__text button {
     padding: 26px 48px;
     border-radius: 18px;
     background-color: #292F36;
@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 
-.banner__text button span {
+.banner .container .banner__text button span {
     color: #fff;
     font-family: "Jost", sans-serif;
     font-size: 18px;
@@ -76,7 +76,7 @@
     line-height: 22.5px;
 }
 
-.banner__text button span::after {
+.banner .container .banner__text button span::after {
     content: url(static/arrow-right-orange.svg);
     margin-left: 10px;
     color: #CDA274;
@@ -212,6 +212,7 @@
     display: flex;
     justify-content: space-between;
     gap: 27px;
+    flex-wrap: wrap;
 }
 
 .articles .card {
@@ -219,7 +220,7 @@
     flex-direction: column;
     border: 1px solid #E7E7E7;
     border-radius: 62px;
-    width: 33.333333%;
+    width: 28%;
     padding: 21px;
     position: relative;
 }
@@ -247,7 +248,7 @@
     margin: 0;
 }
 
-.articles button {
+.articles .articles__cards button {
     background-color: #F4F0EC;
     width: 52px;
     height: 52px;
@@ -256,11 +257,11 @@
     cursor: pointer;
 }
 
-.articles .card:nth-child(2) {
+.articles .card:hover {
     background-color: #F4F0EC;
 }
 
-.articles .card:nth-child(2) button {
+.articles .card:hover button {
     background-color: #fff;
 }
 
@@ -322,6 +323,7 @@ footer .pages a {
     font-weight: 400;
     font-size: 22px;
     line-height: 66px;
+    color: #000;
 }
 
 footer .contact {
@@ -339,4 +341,145 @@ footer .contact p {
     font-weight: 400;
     font-size: 22px;
     line-height: 33px;
+}
+
+/* blog */
+
+.banner_blog {
+    background-image: url(static/banner-blog.jpg);
+    height: 356px;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.banner_blog .container {
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.banner_blog .container .banner__text {
+    padding: 41px 78px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 37px 37px 0 0;
+}
+
+.banner_blog .container .banner__text h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62.5px;
+    margin: 0;
+}
+
+.banner_blog .container .banner__text p{
+    margin: 0;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.latest_post .container {
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.latest_post .container > h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62.5px;
+    margin: 0;
+    margin-bottom: 27px;
+}
+
+.latest_post .latest_post_card {
+    display: flex;
+    gap: 35px;
+    padding: 22px;
+    border: 1px solid #E7E7E7;
+    border-radius: 62px;
+}
+
+.latest_post .latest_post_card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 40px;
+}
+
+.latest_post .latest_post_card div > h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.latest_post .latest_post_card > div > p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+    margin-bottom: 41px;
+}
+
+.latest_post .latest_post_card div div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.latest_post .latest_post_card button {
+    background-color: #F4F0EC;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+
+.latest_post .latest_post_card div div p {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.latest_post + .articles .container {
+    align-items: baseline;
+}
+
+.latest_post + .articles .container h2 {
+    margin-bottom: 30px;
+}
+
+.articles .pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 51px;
+    margin-bottom: 104px;
+    gap: 20px;
+}
+
+.articles .pagination button {
+    border: 1px solid #CDA274;
+    background-color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.articles .pagination button:hover,
+.articles .pagination .pagination__active {
+    background-color: #F4F0EC;
+    border: none;
 }

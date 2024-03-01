@@ -26,65 +26,27 @@
     </header>
 
     <main>
-        <section class="banner">
+        <section class="banner_blog">
             <div class="container">
                 <div class="banner__text">
-                    <h2>Let Your Home Be Unique</h2>
-                    <p>There are many variations of the passages of lorem Ipsum fromavailable, majority.</p>
-                    <button><span>Get Started</span></button>
+                    <h2>Articles & News</h2>
+                    <p>Home / Blog</p>
                 </div>
             </div>
 
         </section>
 
-        <section class="projects">
+        <section class="latest_post">
             <div class="container">
-                <h2>Follow Our Projects</h2>
-                <p>It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
-                <div class="projects__cards">
-                    <div class="card">
-                        <img src="static/img_01.jpg" alt="card" />
+                <h2>Latest Post</h2>
+                <div class="latest_post_card">
+                    <img src="static/latest_img.jpg" alt="card" />
+                    <div>
+                        <h3>Low Cost Latest Invented Interior Designing Ideas</h3>
+                        <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</p>
+                        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
                         <div>
-                            <div>
-                                <h3>Modern Kitchan</h3>
-                                <p>Decor / Artchitecture</p>
-                            </div>
-                            <button>
-                                <img src="static/arrow-right.svg" alt="arrow right" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="static/img_02.jpg" alt="card" />
-                        <div>
-                            <div>
-                                <h3>Modern Kitchan</h3>
-                                <p>Decor / Artchitecture</p>
-                            </div>
-                            <button>
-                                <img src="static/arrow-right.svg" alt="arrow right" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="static/img_03.jpg" alt="card" />
-                        <div>
-                            <div>
-                                <h3>Modern Kitchan</h3>
-                                <p>Decor / Artchitecture</p>
-                            </div>
-                            <button>
-                                <img src="static/arrow-right.svg" alt="arrow right" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="static/img_04.jpg" alt="card" />
-                        <div>
-                            <div>
-                                <h3>Modern Kitchan</h3>
-                                <p>Decor / Artchitecture</p>
-                            </div>
+                            <p>26 December,2022 </p>
                             <button>
                                 <img src="static/arrow-right.svg" alt="arrow right" />
                             </button>
@@ -93,35 +55,13 @@
                 </div>
             </div>
 
-        </section>
-
-        <section class="advantages">
-            <div class="container">
-                <div>
-                    <h3>12</h3>
-                    <p>Years Of Experiance</p>
-                </div>
-                <div>
-                    <h3>85</h3>
-                    <p>Success Project</p>
-                </div>
-                <div>
-                    <h3>15</h3>
-                    <p>Active Project</p>
-                </div>
-                <div>
-                    <h3>95</h3>
-                    <p>Happy CUstomers</p>
-                </div>
-            </div>
         </section>
 
         <section class="articles">
             <div class="container">
                 <h2>Articles & News</h2>
-                <p>It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
                 <div class="articles__cards">
-                    <div class="card" v-for="(article, index) in articles.slice(0, 3)" :key="index">
+                    <div class="card" v-for="(article, index) in articles" :key="index">
                         <div class="tag">{{ article.tag }}</div>
                         <img :src="article.pict" alt="pict-article" />
                         <h3>{{ article.title }}</h3>
@@ -133,8 +73,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="pagination">
+                    <button class="pagination__active">01</button>
+                    <button>02</button>
+                    <button>03</button>
+                    <button>></button>
+                </div>
             </div>
         </section>
+
 
     </main>
 
@@ -168,6 +115,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
