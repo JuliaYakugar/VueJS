@@ -210,7 +210,6 @@
 
 .articles .articles__cards {
     display: flex;
-    justify-content: space-between;
     gap: 27px;
     flex-wrap: wrap;
 }
@@ -248,6 +247,7 @@
     margin: 0;
 }
 
+.articles .articles__cards a,
 .articles .articles__cards button {
     background-color: #F4F0EC;
     width: 52px;
@@ -255,6 +255,9 @@
     border-radius: 100px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .articles .card:hover {
@@ -482,4 +485,135 @@ footer .contact p {
 .articles .pagination .pagination__active {
     background-color: #F4F0EC;
     border: none;
+}
+
+.banner_article img{
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.article .container {
+    gap: 52px;
+    margin-bottom: 96px;
+}
+
+.article h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62.5px;
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.article h3 {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31.25px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.article .article_info {
+    flex: 2;
+}
+
+.article .article_info .date{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 46px 0;
+}
+
+.article .article_info > p,
+.article .article_info li {
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.article .article_info ol { 
+    counter-reset: item;
+    padding-left: 0;
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.article .article_info ol li { 
+    display: inline-flex;
+}
+
+.article .article_info ol li:before {
+    content: counter(item) "";
+    counter-increment: item;
+    color: #CDA274;
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-right: 11px;
+}
+
+.article .article_info .quote {
+    background-color: #F4F0EC;
+    display: flex;
+    flex-direction: column;
+    padding: 53px 0;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    margin-bottom: 27px;
+}
+
+.article .article_info .quote p:first-child {
+    font-family: "DM Serif Display", serif;
+    font-size: 200px;
+    font-style: italic;
+    font-weight: 400;
+    height: 90px;
+    color: #CDA274;
+    margin: 0;
+}
+
+.article .article_info .quote p:last-child {
+    font-family: "DM Serif Display", serif;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 31.25px;
+    color: #CDA274;
+    width: 345px;
+    text-align: center;
+}
+
+.article .tags {
+    flex: 1;
+}
+
+.article .tags div{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.article .tags button {
+    background-color: #F4F0EC;
+    color: #292F36;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.5px;
+    padding: 9px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.article .tags button:hover {
+    background-color: #292F36;
+    color: #fff;
 }
