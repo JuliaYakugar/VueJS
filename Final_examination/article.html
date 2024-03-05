@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="static/Logo.svg" alt="logo"/>
+                <h1>Interno</h1>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="articles">
+        <section class="banner_article">
+            <img src="static/banner-article.jpg" alt="banner article" />
+        </section>
+
+        <section class='article'>
+            <div class="container">
+                <div class="article_info">
+                    <h2>Let’s Get Solution for Building Construction Work</h2>
+                    <img src="static/article-img.png" alt="image article" />
+                    <div class="date">
+                        <p>26 December,2022 </p>
+                        <p>Interior / Home / Decore</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.</p>
+                    <p>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                    <div class="quote">
+                        <p>“</p>
+                        <p>The details are not the details. They make the design.</p>
+                    </div>
+                    <h2>Design sprints are great</h2>
+                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                    <ol>
+                        <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                        <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                        <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                    </ol>
+                    <img src="static/article-img-2.png" alt="image article" />
+                    <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+                
+                <div class="tags">
+                    <h3>Tags</h3>
+                    <div>
+                        <button v-for="tag in uniqueTags" :key="tag" @click="selectTag(tag)">{{tag}}</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="articles">
+            <div class="container">
+                <h2>All articles</h2>
+                <div class="articles__cards">
+                    <div class="card" v-for="(article, index) in filteredArticles" :key="index">
+                    <div class="tag">{{ article.tag }} Design</div>
+                    <img :src="article.pict" alt="pict-article" />
+                    <h3>{{ article.title }}</h3>
+                    <div class="card_info">
+                        <p>{{ article.date }}</p>
+                        <a href="article.html">
+                        <img src="static/arrow-right.svg" alt="arrow right" />
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer_info">
+                <a href="index.html" class="logo">
+                    <img src="static/Logo.svg" alt="logo"/>
+                    <h1>Interno</h1>
+                </a>
+                <p>It is a long established fact that a reader will be distracted lookings.</p>
+                <a href="https://twitter.com"><img src="static/twitter.png" alt="twitter-logo" /></a>
+                <a href="https://www.linkedin.com"><img src="static/linkedin.png" alt="linkedin-logo" /></a>
+            </div>
+            <div class="pages">
+                <h2>Pages</h2>
+                <a href="index.html">Home</a>
+                <a href="#">Project</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="contact">
+                <div>
+                    <h2>Contact</h2>
+                    <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                    <p>contact@interno.com</p>
+                    <p>(123) 456 - 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

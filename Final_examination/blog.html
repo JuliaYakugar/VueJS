@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Examination</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,19 +57,19 @@
 
         </section>
 
-        <section class="articles">
+        <section class="articles" id="articles">
             <div class="container">
                 <h2>Articles & News</h2>
                 <div class="articles__cards">
                     <div class="card" v-for="(article, index) in articles" :key="index">
-                        <div class="tag">{{ article.tag }}</div>
+                        <div class="tag">{{ article.tag }} Design</div>
                         <img :src="article.pict" alt="pict-article" />
                         <h3>{{ article.title }}</h3>
                         <div class="card_info">
                             <p>{{ article.date }}</p>
-                            <button>
+                            <a href="article.html">
                                 <img src="static/arrow-right.svg" alt="arrow right" />
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
