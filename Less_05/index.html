@@ -1,0 +1,65 @@
+<!-- Вы разрабатываете приложение для интернет-магазина и у вас есть компонент Vue под названием "ProductDetails". Компонент отображает детали о конкретном продукте, включая его название, цену и статус доступности.
+
+Внутри компонента "ProductDetails" создайте свойство "product" с объектом, представляющим информацию о продукте. Объект должен иметь свойства "name" (название продукта), "price" (цена продукта) и "available" (флаг, указывающий на доступность продукта).
+
+Используя вычисляемое свойство, назовите его "formattedPrice", которое будет возвращать форматированную цену продукта со знаком валюты. Например, если цена равна 99.99, вычисляемое свойство должно вернуть строку "$99.99".
+
+В компоненте "ProductDetails" отобразите название продукта, его форматированную цену и статус доступности.
+
+Если продукт доступен, отобразите текст "Available", в противном случае - "Out of stock". -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Less 05</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>Задание 1</p>
+        <p>Я сделала шапку и подвал отдельными компонентами в прошлом домашнем задании</p>
+        <p>Задание 2</p>
+        <product-details></product-details>
+
+    <script>
+
+        Vue.component('product-details', {
+            data() {
+                return {
+                    product: {
+                        name: 'Кактус',
+                        price: 200,
+                        available: false
+                    }
+                };
+            },
+
+            computed: {
+                formattedPrice() {
+                    return '$' + this.product.price;
+                },
+
+                availabilityCheck() {
+                    return this.product.available ? 'Available' : 'Out of stock';
+                }
+            },
+
+            template: `
+                <div class='product'>
+                    <p>Название товара: {{ product.name }}</p>
+                    <p>Цена: {{ formattedPrice }}</p>
+                    <p>{{ availabilityCheck }}</p>
+                </div>
+            `,
+        });
+
+        const app = new Vue({
+            el: '#app',
+
+        });
+    </script>
+
+</body>
+</html>
