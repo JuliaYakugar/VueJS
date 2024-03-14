@@ -65,6 +65,11 @@ export default {
   },
 
   methods: {
+    methods: {
+    changeComponent(component) {
+      this.$emit('change-component', component);
+    },
+  },
 
   },
 };

@@ -7,7 +7,7 @@
             </a>
             <ul class="menu">
                 <li><button @click="changeComponent('main')">Home</button></li>
-                <li><button @click="changeComponent('article')">Project</button></li>
+                <li><button @click="changeComponent('project')">Project</button></li>
                 <li><button @click="changeComponent('blog')">Blog</button></li>
             </ul>
         </div>
