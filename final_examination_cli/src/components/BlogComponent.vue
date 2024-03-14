@@ -33,6 +33,13 @@
 
         <ArticleComponent quantity=6></ArticleComponent>
 
+        <div class="pagination">
+            <button class="pagination__active">01</button>
+            <button>02</button>
+            <button>03</button>
+            <button>></button>
+        </div>
+
 
     </main>
 </template>
@@ -160,7 +167,7 @@ export default {
     margin-bottom: 30px;
 }
 
-.articles .pagination {
+.pagination {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -169,7 +176,7 @@ export default {
     gap: 20px;
 }
 
-.articles .pagination button {
+.pagination button {
     border: 1px solid #CDA274;
     background-color: #fff;
     width: 52px;
@@ -178,8 +185,8 @@ export default {
     cursor: pointer;
 }
 
-.articles .pagination button:hover,
-.articles .pagination .pagination__active {
+.pagination button:hover,
+.pagination .pagination__active {
     background-color: #F4F0EC;
     border: none;
 }
