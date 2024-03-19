@@ -26,7 +26,7 @@
                                 <p>{{ project.category }}</p>
                             </div>
                             <button>
-                                <img src="@/assets/arrow-right.svg" alt="arrow right" />
+                                <img src="@/assets/arrow-right.svg" @click="changeComponent('one-project')" alt="arrow right" />
                             </button>
                       </div>
                   </div>
@@ -138,8 +138,13 @@
               return this.projects;
           }
           return this.projects.filter((project) => project.category.toLowerCase() === this.categorySelected.toLowerCase());
-      },
-    }
+        },
+
+        changeComponent(component) {
+            this.$emit('change-component', component);
+        },
+    },
+    
   };
   
   </script>
@@ -147,7 +152,7 @@
   <style lang="css" scoped>
   
   .banner_project {
-      background-image: url(../assets/banner-project.jpg);
+      background-image: url(../assets/banner-projects.jpg);
       height: 356px;
       align-items: center;
       margin-bottom: 200px;

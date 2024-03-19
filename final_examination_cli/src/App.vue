@@ -5,7 +5,8 @@
     <MainComponent v-if="currentComponent === 'main'"></MainComponent>
     <BlogComponent v-if="currentComponent === 'blog'"></BlogComponent>
     <ArticlePageComponent v-if="currentComponent === 'article'"></ArticlePageComponent>
-    <ProjectPageComponent v-if="currentComponent === 'project'"></ProjectPageComponent>
+    <ProjectPageComponent v-if="currentComponent === 'project'" @change-component="changeComponent"></ProjectPageComponent>
+    <OneProjectComponent v-if="currentComponent === 'one-project'"></OneProjectComponent>
     
     <FooterComponent></FooterComponent>
   </div>
@@ -17,7 +18,8 @@ import FooterComponent from './components/FooterComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import BlogComponent from './components/BlogComponent.vue';
 import ArticlePageComponent from './components/ArticlePageComponent.vue';
-import ProjectPageComponent from './components/ProjectPageComponent.vue'
+import ProjectPageComponent from './components/ProjectPageComponent.vue';
+import OneProjectComponent from './components/OneProjectComponent.vue';
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     MainComponent,
     BlogComponent,
     ArticlePageComponent,
-    ProjectPageComponent
+    ProjectPageComponent,
+    OneProjectComponent
   },
 
   data() {
@@ -38,7 +41,6 @@ export default {
 
   methods: {
     changeComponent(component) {
-        console.log(component);
       this.currentComponent = component;
     },
   },
