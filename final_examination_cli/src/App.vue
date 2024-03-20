@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <HeaderComponent @change-component="changeComponent"></HeaderComponent>
+    <HeaderComponent></HeaderComponent>
+
+    <router-view />
     
-    <MainComponent v-if="currentComponent === 'main'"></MainComponent>
-    <BlogComponent v-if="currentComponent === 'blog'"></BlogComponent>
-    <ArticlePageComponent v-if="currentComponent === 'article'"></ArticlePageComponent>
-    <ProjectPageComponent v-if="currentComponent === 'project'" @change-component="changeComponent"></ProjectPageComponent>
-    <OneProjectComponent v-if="currentComponent === 'one-project'"></OneProjectComponent>
+    <!-- 
+    <OneProjectComponent v-if="currentComponent === 'one-project'"></OneProjectComponent> -->
     
     <FooterComponent></FooterComponent>
   </div>
@@ -15,22 +14,12 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
-import MainComponent from './components/MainComponent.vue';
-import BlogComponent from './components/BlogComponent.vue';
-import ArticlePageComponent from './components/ArticlePageComponent.vue';
-import ProjectPageComponent from './components/ProjectPageComponent.vue';
-import OneProjectComponent from './components/OneProjectComponent.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    FooterComponent,
-    MainComponent,
-    BlogComponent,
-    ArticlePageComponent,
-    ProjectPageComponent,
-    OneProjectComponent
+    FooterComponent
   },
 
   data() {
@@ -38,11 +27,12 @@ export default {
       currentComponent: 'main',
     };
   },
+  created() {
+    this.$router.push({ name: 'main'})
+  },
 
   methods: {
-    changeComponent(component) {
-      this.currentComponent = component;
-    },
+
   },
 }
 </script>
