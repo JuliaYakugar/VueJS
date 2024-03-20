@@ -25,9 +25,9 @@
                                 <h3>{{ project.title }}</h3>
                                 <p>{{ project.category }}</p>
                             </div>
-                            <button>
-                                <img src="@/assets/arrow-right.svg" @click="changeComponent('one-project')" alt="arrow right" />
-                            </button>
+                            <router-link to="/one-project">
+                                <img src="@/assets/arrow-right.svg"  alt="arrow right" />
+                            </router-link>
                       </div>
                   </div>
               </div>
@@ -139,10 +139,6 @@
           }
           return this.projects.filter((project) => project.category.toLowerCase() === this.categorySelected.toLowerCase());
         },
-
-        changeComponent(component) {
-            this.$emit('change-component', component);
-        },
     },
     
   };
@@ -246,14 +242,17 @@
     margin: 0;
   }
   
-  .projects .project_card button {
-      background-color: #F4F0EC;
-      width: 52px;
-      height: 52px;
-      border-radius: 100px;
-      border: none;
-      cursor: pointer;
-  }
+.projects .project_card a {
+    background-color: #F4F0EC;
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
 .pagination {
       display: flex;

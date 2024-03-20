@@ -6,9 +6,9 @@
                 <h1>Interno</h1>
             </a>
             <ul class="menu">
-                <li><button @click="changeComponent('main')">Home</button></li>
-                <li><button @click="changeComponent('project')">Project</button></li>
-                <li><button @click="changeComponent('blog')">Blog</button></li>
+                <router-link to="/">Home</router-link>
+                <router-link to="/project">Project</router-link>
+                <router-link to="/blog">Blog</router-link>
             </ul>
         </div>
     </header>
@@ -29,9 +29,7 @@ export default {
   },
 
   methods: {
-    changeComponent(component) {
-      this.$emit('change-component', component);
-    },
+
   },
 };
 </script>
@@ -59,13 +57,15 @@ export default {
 .menu {
     display: flex;
     gap: 30px;
-    list-style-type: none;
 }
 
-.menu button {
-    background-color: transparent;
-    border: none;
+.menu a {
     cursor: pointer;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
 }
 
 </style>

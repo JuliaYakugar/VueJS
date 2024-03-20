@@ -99,7 +99,7 @@
 import ArticleComponent from './ArticleComponent.vue';
 
 export default {
-  name: 'MainComponet',
+  name: 'MainComponent',
   components: {
     ArticleComponent,
   },

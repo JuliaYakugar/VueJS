@@ -61,21 +61,16 @@ export default {
   },
 
   mounted() {
-    
+
   },
 
   methods: {
-    methods: {
-    changeComponent(component) {
-      this.$emit('change-component', component);
-    },
-  },
 
   },
 };
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 
 .banner_article img{
     width: 100%;

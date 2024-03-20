@@ -10,9 +10,9 @@
                   <h3>{{ article.title }}</h3>
                   <div class="card_info">
                       <p>{{ article.date }}</p>
-                      <button @click="changeComponent('article')">
-                          <img src="../assets/arrow-right.svg" alt="arrow right" />
-                      </button>
+                      <router-link to="/article">
+                        <img src="../assets/arrow-right.svg" alt="arrow right" />
+                    </router-link>
                   </div>
               </div>
           </div>
@@ -94,9 +94,7 @@ props: {
   },
   
   methods: {
-    changeComponent(component) {
-      this.$emit('change-component', component);
-    },
+
   },
 };
 </script>
